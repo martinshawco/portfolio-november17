@@ -1,0 +1,108 @@
+@import "../variables";
+
+
+
+
+// SS Tagline Animation
+@-webkit-keyframes sstagline {
+	0% {
+		top: 20px;
+		opacity: 0;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+@-moz-keyframes sstagline {
+	0% {
+		top: 20px;
+		opacity: 0;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+@-ms-keyframes sstagline {
+	0% {
+		top: 20px;
+		opacity: 0;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+@-o-keyframes sstagline {
+	0% {
+		top: 20px;
+		opacity: 0;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+@keyframes sstagline {
+	0% {
+		top: 20px;
+		opacity: 0;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+
+
+// Hide Navigation Bar
+.mainnav_container{
+	display: none;
+}
+
+
+
+// Splashscreen Container
+.splashscreen_container{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden !important;
+
+	.splashscreen{
+		width: 800px;
+		height: 100%;
+		color: white;
+		padding-top: 400px;
+
+		.ss_logo{
+
+		}
+
+		.ss_tagline{
+			position: relative;
+			margin-top: 20px;
+			-webkit-animation: sstagline 2000ms;
+			-moz-animation: sstagline 2000ms;
+			-o-animation: sstagline 2000ms;
+			-ms-animation: sstagline 2000ms;
+			animation: sstagline 2000ms;
+			font-size: 16pt;
+			color: #555 !important;
+
+			b{
+				padding-top: 20px;
+				display: block;
+				color: #000;
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,172 @@
+// Fonts 
+// @import url(https://fonts.googleapis.com/css?family=Hind:100,300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:100,300,400,600);
+
+// Variables & Responsive Mixins
+@import "variables";
+@import "responsive";
+
+// Reset.css
+@import "node_modules/reset-css/reset";
+
+// Font Awesome
+@import "node_modules/font-awesome/scss/font-awesome";
+
+// Bootstrap
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+// Avoid DocumentReady flash, hide then reveal with JS
+body{
+	opacity: 0;
+}
+
+
+
+
+
+
+
+// ====== Global SCSS ======
+
+html, body, #app {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	color: $text-color;
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}
+
+html{
+    // background: -webkit-linear-gradient(bottom, #ded9e7, #f7f7f8);
+    // background: -o-linear-gradient(bottom, #ded9e7, #f7f7f8);
+    // background: linear-gradient(to top, #ded9e7, #f7f7f8);
+    // background-attachment: fixed !important;
+    // background-repeat: no-repeat !important;
+    background: #eee;
+}
+
+a {
+	text-decoration: none;
+	color: $text-color;
+}
+
+
+
+
+
+
+
+// ====== Main Nav ======
+
+.mainnav_container{
+	width: 100%;
+	height: 120px;
+	display: table;
+	z-index: 1;
+
+    width: calc(100% - 70px);
+    padding: 0 35px;
+	
+	.mainnav_title{
+		width: auto;
+		height: 120px;
+		display: table-cell;
+		vertical-align: middle;
+
+		img{
+			width: 200px;
+			position: relative;
+			top: 3px;
+		}
+	}
+
+	.mainnav_menu{
+		width: 355px;
+		height: 120px;
+		display: table-cell;
+		vertical-align: middle;
+		list-style-type: none;
+
+		.mn_m_item{
+			display: table-cell;
+			padding: 0 14px;
+			font-size: 18pt;
+
+			&.cv{
+				font-size: 15pt;
+				
+				a{
+					position: relative;
+					top: -2px;
+					color: $mainnav-default-color !important;
+				}
+			}
+
+			a{
+				color: $mainnav-default-color;
+				font-family: $font-family-sans-serif;
+				-moz-transition-duration: 300ms;
+				-webkit-transition-duration: 300ms;
+				transition-duration: 300ms;
+
+				&:hover{
+					color: $mainnav-hover-color;
+				}
+				&:active{
+					color: $mainnav-hover-color;
+				}
+				&.current{
+					color: $mainnav-current-color;
+				}
+			}
+		}
+
+		.mn_m_i_cv_phone{
+			display: none;
+		}
+	}
+}
+
+
+
+
+
+
+
+@include phone {
+
+	.mainnav_container{
+		padding: 0 !important;
+		width: 100% !important;
+	}
+
+	.mainnav_title, .mainnav_menu{
+		width: 100% !important;
+		height: auto !important;
+		display: block !important;
+		text-align: center;
+	}
+
+	.mn_m_item{
+		width: 25% !important;
+		padding: 15px 0 !important;
+		display: block !important;
+    	float: left !important;
+		text-align: center;
+	}
+
+	.mn_m_i_cv_phone{
+		display: block !important;
+	}
+	
+	.mn_m_i_cv_desktop{
+		display: none !important;
+	}
+
+}
